@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/CvAt4gNrM9b
  */
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "./ui/button";
 
 export function HeroComponent() {
   return (
@@ -19,9 +19,13 @@ export function HeroComponent() {
             priority
           />
           <div className="space-y-2 text-center text-[#b0d67a] lg:text-left">
-            <p className="text-2xl font-bold tracking-tighter sm:text-3xl">
+            <a
+              href="https://www.instagram.com/lojacacaushow.recife"
+              className="text-2xl font-bold tracking-tighter sm:text-3xl"
+              target="_blank"
+            >
               @lojacacaushow.recife
-            </p>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center space-y-4 lg:order-1 lg:items-start lg:px-20">
@@ -29,29 +33,73 @@ export function HeroComponent() {
             Principal rede de franquias da cacau show de Recife.
           </p>
           <ul className="list-inside list-disc self-start text-gray-200 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Lojas:
-            <li className="underline">Plaza Shopping</li>
-            <li className="underline">Boa viagem</li>
-            <li className="underline">Casa Amarela</li>
-            <li className="underline">Graças</li>
-            <li className="underline">Caxangá</li>
-            <li className="underline">Tamarineira</li>
+            Lojas: (clique para abrir no mapa)
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/rxXv4QKUi4dcq613A"
+                target="_blank"
+              >
+                Plaza Shopping
+              </a>
+            </li>
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/TywBiMbPiYqyw4LE7"
+                target="_blank"
+              >
+                Boa viagem
+              </a>
+            </li>
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/yumB6vitwDixAyri7"
+                target="_blank"
+              >
+                Casa Amarela
+              </a>
+            </li>
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/qQaK6u99SmssfPi66"
+                target="_blank"
+              >
+                Graças
+              </a>
+            </li>
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/pWBF6C3GmJvUrYs28"
+                target="_blank"
+              >
+                Caxangá
+              </a>
+            </li>
+            <li className="hover:underline">
+              <a
+                href="https://maps.app.goo.gl/YyTRGZB1xzwSNbT48"
+                target="_blank"
+              >
+                Tamarineira
+              </a>
+            </li>
           </ul>
           <div className="flex items-center justify-center space-x-4 lg:order-1 lg:items-end lg:justify-start">
-            <Link
+            <a
               className="flex h-10 items-center rounded-md bg-gray-50 px-4 text-sm font-medium shadow transition-colors hover:bg-gray-50/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-              href="#"
+              href="https://www.instagram.com/lojacacaushow.recife"
+              target="_blank"
             >
-              <InstagramIcon className="h-4 w-4" />
-              Follow us
-            </Link>
-            <Link
-              className="flex h-10 items-center rounded-md border border-gray-200  bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-              href="#"
+              <InstagramIcon className="mr-1 h-4 w-4" />
+              Seguir
+            </a>
+            <a
+              className="flex h-10 items-center rounded-md border border-gray-200 bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="https://linktr.ee/cacaushow.recife"
+              target="_blank"
             >
-              <SmartphoneIcon className="h-4 w-4" />
-              Order now
-            </Link>
+              <SmartphoneIcon className="mr-1 h-4 w-4" />
+              Pedir agora
+            </a>
           </div>
         </div>
       </div>
